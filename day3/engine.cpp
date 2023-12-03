@@ -35,8 +35,6 @@ void	checkLine(int i, string *lines, int &sum)
 	cout << lines[i];
 	while ((pos = lines[i].find_first_of("0123456789", pos)) != string::npos)
 	{
-		// add = false;
-		
 		end_pos = lines[i].find_first_not_of("0123456789", pos);
 		if (end_pos == string::npos) end_pos = lines[i].length();
 		num = stoi(lines[i].substr(pos, end_pos - pos));
@@ -53,10 +51,8 @@ void	checkLine(int i, string *lines, int &sum)
 int	main(int argc, char **argv)
 {
 	ifstream			file;
-	string				lines[3], buffer[2], line, check_line;
-	string::size_type	pos, end_pos, check_pos, check_end_po;
-	int					num, sum;
-	bool				add;
+	string				lines[3], buffer[2], line;
+	int					sum;
 
 	if (argc != 2)
 		return (1);
