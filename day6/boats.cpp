@@ -5,25 +5,6 @@
 using namespace std;
 using boatRace = tuple<long, long>;
 
-/*
-Time:      7  15   30
-Distance:  9  40  200
-		{7,9},
-		{15,40},
-		{30,200}
-*/
-
-
-/*
-Time:        48     98     90     83
-Distance:   390   1103   1112   1360
-48989083
-390110311121360
-		{48,390},
-		{98,1103},
-		{90,1112},
-		{83,1360}
-*/
 
 
 long	winning_options(boatRace &race)
@@ -43,14 +24,14 @@ long	winning_options(boatRace &race)
 int main(int argc, char **argv)
 {
 	vector<boatRace>	races = {
-		{48,390},
-		{98,1103},
-		{90,1112},
-		{83,1360}
+		{12,345},
+		{34,567},
+		{89,1011},
+		{12,1314}
 
 	};
 	vector<boatRace>	big_race = {
-		{48989083,390110311121360}
+		{12348912,34556710111314}
 	};
 	long ret = 1;
 	for (int i = 0; i < races.size(); i++)
